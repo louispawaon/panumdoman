@@ -14,15 +14,14 @@ export default function Home() {
 
   
   const getRandomWord=useCallback(()=>{
-    let randomWord = tagalogWords[Math.floor(Math.random() * tagalogWords.length)];
+    let randomWord = tagalogWords.words[Math.floor(Math.random() * tagalogWords.words.length)];
     /*if(shownWord.length > 10){
       // choose a random word from shown words
       randomWord = shownWord[Math.floor(Math.random() * shownWord.length)];
     }*/
     setCurrentWord(randomWord);
-    //setShownWord(prevWords=>[...prevWords,randomWord]);
+    
   },[])
-
 
   const restartGame = useCallback(() => {
     setShownWord([]);
@@ -40,6 +39,7 @@ export default function Home() {
 
   const handleGuess=useCallback((guess:string)=> {
     if (guess === 'NEW' && !shownWord.includes(currentWord)) {
+      setShownWord(prevWords=>[...prevWords,currentWord]);
       // The user correctly identified a new word
       setScore(prevScore => prevScore + 1);
     } else if (guess === 'NEW' && shownWord.includes(currentWord)) {
