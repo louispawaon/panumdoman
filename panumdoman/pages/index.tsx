@@ -48,7 +48,7 @@ const handleGuess = (guess: boolean) => {
   if(newWordCounter>=5 && (newWordCounter % 5 === 0 || newWordCounter % 2 === 0)) {
       const nextWord = shownWord[Math.floor(Math.random() * shownWord.length)];
       setCurrentWord({ tagalogWords: nextWord.tagalogWords, seen: nextWord.seen });
-      setNewWordCounter(0);
+      //setNewWordCounter(0);
   } else {
       const nextWord = allWords[Math.floor(Math.random() * allWords.length)];
       setCurrentWord({ tagalogWords: nextWord, seen: shownWord.some(w => w.tagalogWords === nextWord) });
