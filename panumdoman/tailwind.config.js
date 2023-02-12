@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily:{
+      'forBody': ['Roboto', 'sans-serif'],
+      'forTitle': ['Lexend Deca','sans-serif']
+    }
   },
   plugins: [],
 }
