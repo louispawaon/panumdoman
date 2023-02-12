@@ -17,21 +17,22 @@ export default function MainGame(){
     const wordFetch = useRef(false)
 
 const restartGame = () => {
-  setCurrentWord({ tagalogWords: "", seen: false });
   setShownWord([]);
+  setNewWordCounter(0);
   setScore(0);
   setLives(3);
   setAllWords(tagalogWords.words);
   setGameOver(false);
+  setNew();
 }
 
 const setNew=()=>{
+    if(lives===0){ //new problem
+      setGameOver(true)
+    }
     const nextWord = tagalogWords.words[Math.floor(Math.random() * tagalogWords.words.length)];
     setCurrentWord({ tagalogWords: nextWord, seen: shownWord.some(w => w.tagalogWords === nextWord) });
-    //console.log("the word is", nextWord)
-    //console.log("am i appending something?")
     setShownWord([...shownWord,{tagalogWords: nextWord, seen: true}]);
-    //console.log("the shown word is", shownWord)
     
 }
 useEffect(() => { //pre rendered
@@ -40,9 +41,7 @@ useEffect(() => { //pre rendered
     setNew()
 }, []);
 
-
-
-const handleGuess = useCallback((guess: boolean) => {
+const handleGuess = (guess: boolean) => {
 
   //lives-scoring mechanic
   if (guess === currentWord.seen) { //new and not seen (default false)
@@ -58,9 +57,7 @@ const handleGuess = useCallback((guess: boolean) => {
   if (shownWord.length === 0 || (shownWord.length > 0 && shownWord[shownWord.length-1].tagalogWords == currentWord.tagalogWords)) {
       setNewWordCounter(newWordCounter + 1);
   }
-  //setShownWord([...shownWord, currentWord]);
   setAllWords(allWords.filter(w => w !== currentWord.tagalogWords));
-  //console.log("allwords", allWords, newWordCounter)
 
   if(newWordCounter>=5 && (newWordCounter % 5 === 0 || newWordCounter % 2 === 0)) {
         console.log("welcome to modolo",shownWord)
@@ -69,19 +66,10 @@ const handleGuess = useCallback((guess: boolean) => {
         setCurrentWord({ tagalogWords: nextWord.tagalogWords, seen: nextWord.seen });
         setNewWordCounter(0)
   } else {
-        //console.log("am i setting up?")
-        //const nextWord = allWords[Math.floor(Math.random() * allWords.length)];
-        //setCurrentWord({ tagalogWords: nextWord, seen: shownWord.some(w => w.tagalogWords === nextWord) });
         setNew()
-        //console.log("else",nextWord)
   }
 
-  if(lives === 0){
-    setGameOver(true);
-  }
-
-},[lives])
-
+}
   return (
     <div>
         {gameOver ? (
