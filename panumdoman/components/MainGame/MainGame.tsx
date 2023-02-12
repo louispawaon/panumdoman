@@ -27,9 +27,6 @@ const restartGame = () => {
 }
 
 const setNew=()=>{
-    if(lives===0){ //new problem
-      setGameOver(true)
-    }
     const nextWord = tagalogWords.words[Math.floor(Math.random() * tagalogWords.words.length)];
     setCurrentWord({ tagalogWords: nextWord, seen: shownWord.some(w => w.tagalogWords === nextWord) });
     setShownWord([...shownWord,{tagalogWords: nextWord, seen: true}]);
@@ -70,6 +67,13 @@ const handleGuess = (guess: boolean) => {
   }
 
 }
+
+useEffect(()=>{
+  if (lives===0){
+    setGameOver(true);
+  }
+},[lives])
+
   return (
     <div>
         {gameOver ? (
