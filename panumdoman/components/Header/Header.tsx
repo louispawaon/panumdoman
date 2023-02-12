@@ -1,7 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import {MdOutlineIntegrationInstructions,MdOutlineLeaderboard} from 'react-icons/md';
 import {RiInformationLine} from 'react-icons/ri'
-
 
 export default function Header(){
     return(
