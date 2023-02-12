@@ -1,16 +1,19 @@
 import React from "react";
+import {MdOutlineIntegrationInstructions,MdOutlineLeaderboard} from 'react-icons/md';
+import {RiInformationLine} from 'react-icons/ri'
+
 
 export default function Header(){
     return(
         <main>
-            <header>
-                <a href="">panumdoman.</a>
-                <nav>
-                    <h5>Mechanics</h5>
-                    <h5>Leaderboard</h5>
-                    <h5>About</h5>
-                </nav>
-            </header>
+            <nav>
+                <h1 className="font-lexend text-3xl font-semibold flex-auto text-center">panumdoman.</h1>
+                <div>
+                    <MdOutlineIntegrationInstructions className="h-7 w-7"/>
+                    <MdOutlineLeaderboard className="h-7 w-7"/>
+                    <RiInformationLine className="h-7 w-7"/>
+                </div>
+            </nav>
         </main>
         )
 }
