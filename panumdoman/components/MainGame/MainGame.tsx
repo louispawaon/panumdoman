@@ -1,4 +1,4 @@
-import React, {useEffect,useState, useRef,useCallback} from "react";  
+import React, {useEffect,useState, useRef} from "react";  
 import tagalogWords from '../../pages/corpus/wordlist.json';
 
 interface Word {
