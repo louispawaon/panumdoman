@@ -1,18 +1,23 @@
 import React, {useState} from "react";
-import {MdOutlineIntegrationInstructions,MdOutlineLeaderboard} from 'react-icons/md';
+import {MdOutlineLeaderboard} from 'react-icons/md';
 import {RiInformationLine} from 'react-icons/ri'
+import {AiOutlineQuestionCircle} from 'react-icons/ai'
 
 export default function Header(){
-    return(
-        <main>
-            <nav>
-                <h1 className="font-lexend text-3xl font-semibold flex-auto text-center">panumdoman.</h1>
-                <div>
-                    <MdOutlineIntegrationInstructions className="h-7 w-7"/>
-                    <MdOutlineLeaderboard className="h-7 w-7"/>
-                    <RiInformationLine className="h-7 w-7"/>
-                </div>
-            </nav>
-        </main>
-        )
-}
+     return (
+        <nav className="flex items-center justify-between px-4 py-3 bg-gray-800">
+        <div className="flex-1 sm:text-center text-left">
+          <p className="font-lexend sm:text-3xl font-semibold text-xl text-white">panumdoman.</p>
+        </div>
+         <div className="flex items-center">
+            <AiOutlineQuestionCircle className="text-white h-7 w-7 fill-current mr-4"/>
+
+            <MdOutlineLeaderboard className="text-white h-7 w-7 fill-current mr-4"/>
+    
+            <RiInformationLine className="text-white h-7 w-7 fill-current mr-4"/>
+         </div>
+       </nav>
+     );
+   };
+
+   {/*to be fixed ang hamburger menu bcos yes*/}
