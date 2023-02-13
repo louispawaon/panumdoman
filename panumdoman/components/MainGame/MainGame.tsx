@@ -44,6 +44,9 @@ const handleGuess = (guess: boolean) => {
   if (guess === currentWord.seen) { //new and not seen (default false)
     setScore(score => score + 1);
   }
+  else if(guess!=currentWord.seen){
+    setLives(lives=>lives-1);
+  }
   else if (currentWord.seen){ //seen and seen
     setScore(score => score + 1);
   }else{
