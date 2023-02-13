@@ -2,7 +2,7 @@
 
 import React,{useState} from "react";
 
-export default function Modal() {
+export default function InstructionModal() {
   const [showModal, setShowModal] = useState<boolean>(false);
   return (
     <>
