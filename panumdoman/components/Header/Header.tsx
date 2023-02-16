@@ -11,7 +11,7 @@ interface Header{
 
 export default function Header({onOpenInstModal,onOpenAboutModal}:Header){
      return (
-        <nav className="flex items-center justify-between px-4 py-3 bg-gray-800">
+        <nav className=" fixed top-0 w-full flex items-center justify-between px-4 py-3 bg-gray-800">
         <div className="flex-1 sm:text-center text-left">
           <p className="font-lexend sm:text-3xl font-semibold text-xl text-white">panumdoman.</p>
         </div>
