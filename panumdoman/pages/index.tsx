@@ -1,5 +1,5 @@
 import React, {useEffect,useState} from "react";  
-import {MainGame,Header,InstructionModal,AboutModal} from '../components/CompontentIndex'
+import {MainGame,Header,InstructionModal,AboutModal,Footer} from '../components/CompontentIndex'
 
 export default function Home() {
   const [showInstModal, setShowInstModal] = useState(false);
@@ -31,6 +31,7 @@ export default function Home() {
       <InstructionModal isOpen={showInstModal} onClose={handleInstModalClose}/>
       <AboutModal isOpen={showAboutModal} onClose={handleAboutModalClose}/>
       <MainGame/>
+      <Footer/>
     </>
     )
 }

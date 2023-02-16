@@ -78,20 +78,23 @@ useEffect(()=>{
 },[lives])
 
   return (
-    <div>
+    <div className="flex items-center justify-center h-screen">
         {gameOver ? (
             <div>
-                <p>Game Over</p>
-                <button onClick={restartGame}>Restart</button>
+                <p className="font-lexend sm:text-9xl text-7xl font-bold">Game Over</p>
+                <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={restartGame}>Restart</button>
             </div>
         ) : (
           <div>
-              <p>Current word: {currentWord.tagalogWords}</p>
-              <p>Score: {score}</p>
-              <p>Remaining Lives: {lives}</p>
-              <p>Have you seen this word before?</p>
-              <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={() => handleGuess(true)}>SEEN</button>
-              <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={() => handleGuess(false)}>NEW</button>
+              <div className="flex space-x-60 items-center text-4xl">
+                <p>Lives: {lives}</p>
+                <p>Score: {score}</p>
+              </div>
+              <p className="font-lexend sm:text-9xl text-7xl font-bold">{currentWord.tagalogWords}</p>
+              <div className="space-x-60">
+                <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={() => handleGuess(true)}>SEEN</button>
+                <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={() => handleGuess(false)}>NEW</button>
+              </div>
           </div> 
        )}
     </div>
