@@ -21,9 +21,10 @@ export default function AboutModal({isOpen,onClose}:AboutModal){
                   <h3 className="font-lexend text-3xl font-semibold flex-auto text-center">about.</h3>
                 </h3>
                 <button
-                  className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                  className="p-1 ml-auto bg-transparent border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                  onClick={onClose}
                 >
-                  <span className="bg-transparent opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                  <span className="bg-transparent h-6 w-6 text-2xl block outline-none focus:outline-none">
                     ×
                   </span>
                 </button>
