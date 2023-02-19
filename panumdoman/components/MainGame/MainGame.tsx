@@ -81,16 +81,16 @@ useEffect(()=>{
     <div className="flex justify-center items-center h-screen">
         {gameOver ? (
             <div className="text-center">
-                <p className="font-lexend sm:text-9xl text-7xl font-bold">Game Over</p>
+                <p className="font-lexend xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl font-bold">Game Over</p>
                 <button className="mt-6 text-center bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={restartGame}>Restart</button>
             </div>
         ) : (
           <div>
-              <div className="flex justify-center space-x-10 text-center text-4xl">
+              <div className="mb-8 flex justify-center space-x-10 text-center text-4xl">
                 <p>Lives| {lives}</p>
                 <p>Score| {score}</p>
               </div>
-              <p className="text-center sm:text-9xl text-7xl font-lexend font-bold">{currentWord.tagalogWords}</p>
+              <p className="text-center xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl font-lexend font-bold">{currentWord.tagalogWords}</p>
               <div className="mt-6 text-center space-x-20">
                 <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={() => handleGuess(true)}>SEEN</button>
                 <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={() => handleGuess(false)}>NEW</button>
