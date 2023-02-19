@@ -1,5 +1,4 @@
-import React, {useState} from "react";
-import {MdOutlineLeaderboard} from 'react-icons/md';
+import React from "react";
 import {RiInformationLine} from 'react-icons/ri'
 import {AiOutlineQuestionCircle} from 'react-icons/ai'
 
@@ -17,9 +16,6 @@ export default function Header({onOpenInstModal,onOpenAboutModal}:Header){
         </div>
         <div className="flex">
           <AiOutlineQuestionCircle onClick={onOpenInstModal} className="text-white h-7 w-7 fill-current mr-4"/>
-          
-          <MdOutlineLeaderboard className="text-white h-7 w-7 fill-current mr-4"/>
-  
           <RiInformationLine onClick={onOpenAboutModal} className="text-white h-7 w-7 fill-current mr-4"/>
         </div>
        </nav>
