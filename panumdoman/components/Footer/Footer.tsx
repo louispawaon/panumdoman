@@ -7,7 +7,7 @@ export default function Footer(){
         <footer className="fixed bottom-0 w-full bg-gray-800 py-6 px-4">
           <div className="container mx-auto flex justify-between items-center">
             <div>
-            <a href="https://github.com/yourgithubrepository" target="_blank" rel="noopener noreferrer" className="text-white text-sm hover:text-gray-300">
+            <a href="https://github.com/louispawaon/panumdoman" target="_blank" rel="noopener noreferrer" className="text-white text-sm hover:text-gray-300">
                 Visit repository here
               </a>
             </div>
