@@ -17,9 +17,11 @@ export default function AboutModal({isOpen,onClose}:AboutModal){
             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
               {/*header*/}
               <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                <h3 className="text-3xl font-semibold">
-                  <h3 className="font-lexend text-3xl font-semibold flex-auto text-center">about.</h3>
-                </h3>
+                <div className="font-semibold leading-3">
+                  <h3 className="font-lexend text-3xl font-semibold flex-auto text-center">pandumdoman.</h3>
+                  <i className="text-xs">(ceb.) [pa.num.dú.man.] n.</i>
+                  <h4 className="text-xl">memory, recollection</h4>
+                </div>
                 <button
                   className="p-1 ml-auto bg-transparent border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                   onClick={onClose}
@@ -32,7 +34,7 @@ export default function AboutModal({isOpen,onClose}:AboutModal){
               {/*body*/}
               <div className="relative p-6 flex-auto">
                 <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                  {/*text here*/}
+                <p>further improved filipino verbal memory test inspired from the human benchmark test, where you need to keep words in short term memory as possible with the twist that it is comprised with the filipino language.</p>
                 </p>
               </div>
               {/*footer*/}

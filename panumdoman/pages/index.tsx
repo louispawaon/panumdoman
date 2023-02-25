@@ -1,17 +1,8 @@
 import React, {useEffect,useState} from "react";  
-import {MainGame,Header,InstructionModal,AboutModal,Footer} from '../components/CompontentIndex'
+import {MainGame,Header,AboutModal,Footer} from '../components/CompontentIndex'
 
 export default function Home() {
-  const [showInstModal, setShowInstModal] = useState(false);
   const [showAboutModal, setShowAboutModal] = useState(false);
-
-  const handleInstModal=()=>{
-    setShowInstModal(true);
-  };
-
-  const handleInstModalClose=()=>{
-    setShowInstModal(false);
-  };
 
   const handleAboutModal=()=>{
     setShowAboutModal(true);
@@ -22,13 +13,12 @@ export default function Home() {
   };
 
   useEffect(() =>{
-    setShowInstModal(true);
+    setShowAboutModal(true);
   },[])
 
   return (
     <>
-      <Header onOpenInstModal={handleInstModal} onOpenAboutModal={handleAboutModal}/>
-      <InstructionModal isOpen={showInstModal} onClose={handleInstModalClose}/>
+      <Header onOpenAboutModal={handleAboutModal}/>
       <AboutModal isOpen={showAboutModal} onClose={handleAboutModalClose}/>
       <MainGame/>
       <Footer/>
