@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import {RiInformationLine} from 'react-icons/ri'
 
 interface Header{
@@ -8,6 +9,8 @@ interface Header{
 
 export default function Header({onOpenAboutModal}:Header){
      return (
+      <>
+        <title>panumdoman.</title>
         <nav className=" fixed top-0 w-full flex items-center justify-between px-4 py-3 bg-sky-800">
         <div className="flex">
           <span className="font-lexend font-semibold text-3xl text-amber-50">panumdoman.</span>
@@ -16,5 +19,6 @@ export default function Header({onOpenAboutModal}:Header){
           <button><RiInformationLine onClick={onOpenAboutModal} className="text-amber-50 h-7 w-7 fill-current mr-4 hover:text-gray-300"/></button>
         </div>
        </nav>
+       </>
      );
    };

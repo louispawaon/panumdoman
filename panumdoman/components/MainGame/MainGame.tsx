@@ -40,13 +40,15 @@ useEffect(() => { //pre rendered
     setNew()
 }, []);
 
-//Animation for score
+/*
+//Animation for score - scapped for now
 useEffect(()=>{
   if(isCorrect){
     setIsAnimating(true)
     setTimeout(() => setIsAnimating(false), 200);
   }
 },[isCorrect])
+*/
 
 const handleGuess = (guess: boolean) => {
 
@@ -100,7 +102,7 @@ useEffect(()=>{
           <div>
               <div className="mb-8 flex justify-center space-x-10 text-center text-4xl">
                 <p>lives |</p><p className="font-semibold">{lives}</p>
-                <p>score |</p><p className={`font-semibold ${isCorrect?"text-emerald-800":"text-black"}`}>{score}</p>
+                <p>score |</p><p className="font-semibold">{score}</p>
               </div>
               <p className="text-center xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl font-lexend font-bold text-rose-700">{currentWord.tagalogWords}</p>
               <div className="mt-6 text-center space-x-20">
