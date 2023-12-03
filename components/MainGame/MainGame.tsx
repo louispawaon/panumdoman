@@ -100,7 +100,7 @@ useEffect(()=>{
             </div>
         ) : (
           <div>
-              <div className="mb-8 flex justify-center space-x-10 text-center text-4xl">
+              <div className="mb-8 flex justify-center space-x-10 text-center text-4xl text-stone-900">
                 <p>lives |</p><p className="font-semibold">{lives}</p>
                 <p>score |</p><p className="font-semibold">{score}</p>
               </div>
