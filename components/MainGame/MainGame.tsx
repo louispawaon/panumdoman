@@ -93,7 +93,7 @@ useEffect(()=>{
   return (
     <div className="flex justify-center items-center h-screen bg-stone-100">
         {gameOver ? (
-            <div className="text-center">
+            <div className="text-center text-stone-900">
                 <p className="font-lexend xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl font-bold">GAME OVER</p>
                 <p className="mt-5 font-lexend xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl font-medium">FINAL SCORE| {score}</p>
                 <button className="mt-6 text-center bg-transparent hover:bg-slate-100 hover:border-zinc-500 bg-yellow-500 text-zinc-800 font-bold hover:text-zinc-800 py-2 px-4 border hover:border-transparent rounded" onClick={restartGame}>RESTART GAME</button>
